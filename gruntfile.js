@@ -64,7 +64,7 @@ module.exports = function (grunt) {
             var type;
 
             function addVersion(str) {
-              return str.replace(/__REDEFINE_VERSION__/g, version);
+              return str.replace(/__REDEFINE__VERSION__/g, version);
             }
 
             // set the redefine version everywhere we need to
@@ -103,9 +103,9 @@ module.exports = function (grunt) {
     copy: {
       redefine: {
         files: [
-          {src: './tmp/redefine.js', dest: '<%=output_files.main %>', filter: 'isFile'},
+          {src: './redefine.js', dest: '<%=output_files.main %>', filter: 'isFile'},
           {src: './tmp/redefine.min.js', dest: '<%=output_files.main_min %>', filter: 'isFile'},
-          {src: './tmp/redefine.js', dest: '<%=last_output_files.main %>', filter: 'isFile'},
+          {src: './redefine.js', dest: '<%=last_output_files.main %>', filter: 'isFile'},
           {src: './tmp/redefine.min.js', dest: '<%=last_output_files.main_min %>', filter: 'isFile'}
         ]
       },
