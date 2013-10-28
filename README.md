@@ -4,13 +4,17 @@ Enter Redefine. Redefine provides a define() method that caches AMD calls. Simpl
 
 ```js
 redefine()
-  .save.as(localName)           // a local name in Redefine's cache
-  .let(dependencyId)            // a dependency ID that was used in define()
-  .be(resolvedObj)              // a resolved object. If a string, will map to a <localName> from another call
-                                // if an object, will be substituted directly
-  .let().be(X).from.exports()   // use X as module.exports, no matter if it's a module or string
-  .let().be(X).from.redefine()  // use <localName> no matter what (will force a toString() on non string objects)
-  .let().be()...                // etc
+  .save.as(localName) // a local name in Redefine's cache
+  .let(dependencyId)  // a dependency ID that was used in define()
+  .be(resolvedObj)    // a resolved object. If a string, will map to a <localName> from another call
+                      // if an object, will be substituted directly
+  .let()
+    .be(X)
+    .from.exports()   // use X as module.exports, no matter if it's a module or string
+  .let()
+    .be(X)
+    .from.redefine()  // use <localName> no matter what (will force a toString() on non string objects)
+  .let().be()...      // etc
 ```
 
 With the environment in place, you can then collect your exports:
