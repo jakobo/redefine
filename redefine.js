@@ -191,7 +191,12 @@ var require, define, redefine;
                    */
                   redefine: function() {
                     delete self._.depends[lets];
-                    self._.links[lets] = bes;
+                    if (typeof bes.toString === 'function') {
+                      self._.links[lets] = bes.toString();
+                    }
+                    else {
+                      self._.links[lets] = bes + '';
+                    }
                     return genLet();
                   }
                 }
