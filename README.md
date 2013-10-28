@@ -13,13 +13,17 @@ redefine()
     .from.exports()   // use X as module.exports, no matter if it's a module or string
   .let()
     .be(X)
-    .from.redefine()  // use <localName> no matter what (will force a toString() on non string objects)
+    .from.redefine()  // use <localName> no matter what
+                      // (will force a toString() on non string objects)
+
   .let().be()...      // etc
 ```
 
 With the environment in place, you can then collect your exports:
 
-`var exports = redefine.exports(localName);`
+```js
+var exports = redefine.exports(localName);
+```
 
 Some additional things you can do:
 
@@ -28,4 +32,6 @@ Some additional things you can do:
 
 When using this library, define() and require() have been overwritten. You can always restore them with
 
-`redefine.restore()`
+```js
+redefine.restore();
+```
