@@ -1,0 +1,39 @@
+{
+  "name": "redefine",
+  "version": "0.0.1",
+  "description": "Makefile for redefine",
+  "author": "LinkedIn",
+  "private": true,
+  "maintainers": [
+    {
+      "name": "Jakob Heuser",
+      "email": "jheuser@linkedin.com, jakob@felocity.com",
+      "web": "http://www.felocity.com"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:linkedin/redefine.git"
+  },
+  "implements": [
+    "https://github.com/amdjs/amdjs-api/wiki/AMD"
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-jshint": "~0.2.0",
+    "grunt-contrib-uglify": "~0.1.2",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-shell": "~0.2.1",
+    "grunt-express": "~0.2.0",
+    "express": "~3.0.0"
+  },
+  "dependencies": {},
+  "engine": "node >= 0.8.10"
+}
