@@ -197,7 +197,7 @@ var require, define, redefine;
                 }
               });
             }
-          }
+          };
         }
       };
       for (var item in also) {

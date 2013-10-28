@@ -149,7 +149,7 @@ module.exports = function (grunt) {
       },
       redefine: {
         files: {
-          './tmp/redefine.min.js': [ './tmp/redefine.js' ]
+          './tmp/redefine.min.js': [ './redefine.js' ]
         }
       }
     },
@@ -190,11 +190,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-shell');
-  grunt.loadNpmTasks('grunt-include-replace');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-express');
-  grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.registerTask('build', [
     'jshint',
