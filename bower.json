@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "main": [
     "dist/recent/redefine.js",
-    "dist/recent/redefine.min.js",
-    "dist/recent/LICENSE",
-    "dist/recent/README.md"
+    "dist/recent/redefine.min.js"
   ],
   "ignore": [
     ".jshintrc",
