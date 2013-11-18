@@ -1,0 +1,29 @@
+{
+  "name": "redefine",
+  "version": "0.0.1",
+  "main": [
+    "dist/recent/redefine.js",
+    "dist/recent/redefine.min.js",
+    "dist/recent/LICENSE",
+    "dist/recent/README.md"
+  ],
+  "ignore": [
+    ".jshintrc",
+    ".gitignore",
+    "README.md"
+  ],
+  "description": "Mock AMD dependencies in a Mocha and Chai style",
+  "keywords": [
+    "amd",
+    "sinon",
+    "dependency",
+    "dependencies",
+    "mock",
+    "stub",
+    "module",
+    "loader"
+  ],
+  "license": [
+    "Apache"
+  ]
+}
