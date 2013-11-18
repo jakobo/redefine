@@ -12,7 +12,7 @@ describe('define', function() {
     });
     it('should be a function', function() {
       expect(define).to.be.a('function');
-    })
+    });
   });
 });
 
@@ -100,7 +100,7 @@ describe('end to end', function() {
       define(['one'], function(one) {
         return {
           one: one
-        }
+        };
       });
       redefine().save.as('foo').let('one').be(TEST_STRING).from.exports();
       var result = redefine.exports('foo');
@@ -125,6 +125,6 @@ describe('end to end', function() {
       redefine().save.as('bar').let('two').be(myCoerced).from.redefine();
       redefine.exports('bar');
       expect(myObj.callMe.called).to.be.ok();
-    })
+    });
   });
 });
