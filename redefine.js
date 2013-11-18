@@ -350,5 +350,5 @@ var require, define, redefine;
     throw new Error('global require should not be used. You should mock this using sinon or another mocking library');
   };
   
-  redefine.version = '__REDEFINE_VERSION__';
+  redefine.version = '__REDEFINE__VERSION__';
 }());
