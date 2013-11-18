@@ -15,5 +15,5 @@ results
 npm-debug.log
 node_modules
 
-dist
+dist/redefine*
 tmp
