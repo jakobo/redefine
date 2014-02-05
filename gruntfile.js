@@ -78,6 +78,9 @@ module.exports = function (grunt) {
               grunt.config.set('zip_locations.'+type, addVersion(file));
             }
 
+            // set the version in the source
+            grunt.file.write('./tmp/redefine.js', addVersion(grunt.file.read('./redefine.js')));
+
             next();
           }
         }
@@ -103,9 +106,9 @@ module.exports = function (grunt) {
     copy: {
       redefine: {
         files: [
-          {src: './redefine.js', dest: '<%=output_files.main %>', filter: 'isFile'},
+          {src: './tmp/redefine.js', dest: '<%=output_files.main %>', filter: 'isFile'},
           {src: './tmp/redefine.min.js', dest: '<%=output_files.main_min %>', filter: 'isFile'},
-          {src: './redefine.js', dest: '<%=last_output_files.main %>', filter: 'isFile'},
+          {src: './tmp/redefine.js', dest: '<%=last_output_files.main %>', filter: 'isFile'},
           {src: './tmp/redefine.min.js', dest: '<%=last_output_files.main_min %>', filter: 'isFile'}
         ]
       },
@@ -149,7 +152,7 @@ module.exports = function (grunt) {
       },
       redefine: {
         files: {
-          './tmp/redefine.min.js': [ './redefine.js' ]
+          './tmp/redefine.min.js': [ './tmp/redefine.js' ]
         }
       }
     },
