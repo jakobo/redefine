@@ -1,6 +1,6 @@
-Redefine is a great utility for shimming AMD support in testing environments. AMD offers a very effective way of managing dependency injection through it's define(id, dependencies, factoryFunction) interface. However, your tests should never be dependent on a module loader to function.
+Redefine is a great utility for shimming AMD support in testing environments. AMD offers a very effective way of managing dependency injection through its define(id, dependencies, factoryFunction) interface. However, your tests should never be dependent on a module loader to function.
 
-Enter Redefine. Redefine provides a define() method that caches AMD calls. Simply include redefine.js before your module on the page, and it's definition is held in a queue. You can then redirect the dependencies at-will:
+Enter Redefine. Redefine provides a define() method that caches AMD calls. Simply include redefine.js before your module on the page, and its definition is held in a queue. You can then redirect the dependencies at-will:
 
 ```js
 redefine()
